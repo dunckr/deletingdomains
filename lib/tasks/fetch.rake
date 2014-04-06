@@ -21,8 +21,7 @@ task :fetch => :environment do
       domains << {
         'name' => path[0],
         'tld' => path[1],
-        'expiry' => row[1],
-        'rating' => 0
+        'expiry' => row[1]
       }
     end
   end
@@ -30,8 +29,17 @@ task :fetch => :environment do
 
   domains.each do |domain|
     puts "#{domain['name']} #{domain['tld']}"
+    insert domain
   end
   puts domains.count
+end
+
+def insert(item)
+  ActiveRecord::Base.connection.execute("INSERT INTO domains (name, tld, expiry) VALUES ('" \
+    + item['name'].to_s + "','" \
+    + item['tld'].to_s + "','" \
+    + item['expiry'].to_s + "')"
+  )
 end
 
 def download
