@@ -1,3 +1,57 @@
 // Place all the styles related to the Domains controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+$green: #C8FF53;
+$red: #FE3B68;
+$white: #F5F3F3;
+$grey: #6B7174;
+$blue: #4EDAD7;
+
+header a {
+  font-family: 'Lato', sans-serif;
+  color: $grey;
+}
+
+td > h2 {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background: image-url("bg.png");
+}
+
+header {
+  background-color: $red;
+  a {
+    color: $green;
+  }
+}
+
+.jumbo {
+  background-color: $red;
+  color: $white;
+}
+
+.jumbotron {
+  background-color: $blue;
+}
+
+footer {
+  background-color: $grey;
+}
+
+html {
+  background-color: $grey;
+}
+
+#action {
+  background-color: $grey;
+  border-color: transparent;
+  color: $white;
+}
+
+table thead {
+  color: $grey;
+}

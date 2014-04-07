@@ -1,27 +1,56 @@
-<h1>Listing domains</h1>
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <h1 class="logo col-md-4">
+        <a href="http://deletingdomains.herokuapp.com">
+          Deleting Domains
+        </a>
+      </h1>
+    </div>
+  </div>
+</header>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Tld</th>
-      <th>Expiry</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="jumbo container-fluid">
 
-  <tbody>
-    <% @domains.each do |domain| %>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>discover expiring domains</h1>
+      <p class="lead">find your perfect domain without being overcharged</p>
+      <p><a id="action" class="btn btn-lg btn-success" role="button">go</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <table class="table table-striped">
+    <thead>
       <tr>
-        <td><%= domain.name %></td>
-        <td><%= domain.tld %></td>
-        <td><%= domain.expiry %></td>
-        <td><%= link_to 'Show', domain %></td>
-        <td><%= link_to 'Edit', edit_domain_path(domain) %></td>
-        <td><%= link_to 'Destroy', domain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>#</th>
+        <th>name</th>
+        <th>expiring</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @domains.each do |domain| %>
+        <tr>
+          <td><%= domain.id %></td>
+          <td>
+            <h2>
+              <%= domain.name %>
+              <small>.<%= domain.tld %></small>
+            </h2>
+          </td>
+          <td><%= domain.expiry %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<footer>
+  <div class="container-fluid">
+    <div class="footer pull-right">
+      dunckr
+    </div>
+  </div>
+</footer>
