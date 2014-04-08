@@ -5,7 +5,6 @@ class DomainsController < ApplicationController
   # GET /domains.json
   def index
     @domains = Domain.all
-    # @domains = Domain.find(:all, :order => "id desc", :limit => 5)
   end
 
   private

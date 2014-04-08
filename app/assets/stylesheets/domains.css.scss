@@ -49,6 +49,9 @@ header {
 footer {
   background-color: $grey;
   font-family: 'Varela Round', sans-serif;
+  a {
+    color: $blue;
+  }
 }
 
 html {
@@ -71,4 +74,10 @@ table thead {
 
 .tld {
   display: inline;
+}
+
+.twitter {
+  font-family: 'Raleway', sans-serif;
+  color: $green;
+  line-height: 3;
 }
