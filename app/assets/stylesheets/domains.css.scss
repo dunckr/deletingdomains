@@ -9,13 +9,13 @@ $white: #F5F3F3;
 $grey: #6B7174;
 $blue: #4EDAD7;
 
-header a {
-  font-family: 'Lato', sans-serif;
-  color: $grey;
+.logo {
+  font-family: 'Raleway', sans-serif;
+  color: $white;
 }
 
 td > h2 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 body {
@@ -32,14 +32,23 @@ header {
 .jumbo {
   background-color: $red;
   color: $white;
+  font-family: 'Varela Round', sans-serif;
 }
 
 .jumbotron {
+  background-color: $blue;
+  h1 {
+    font-family: 'Varela Round', sans-serif;
+  }
+}
+
+.search {
   background-color: $blue;
 }
 
 footer {
   background-color: $grey;
+  font-family: 'Varela Round', sans-serif;
 }
 
 html {
@@ -54,4 +63,12 @@ html {
 
 table thead {
   color: $grey;
+}
+
+.domain {
+  display: inline;
+}
+
+.tld {
+  display: inline;
 }

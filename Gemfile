@@ -56,4 +56,6 @@ gem 'bootstrap-will_paginate', '~> 0.0.10'
 
 gem 'bootstrap-sass', '~> 3.1.1'
 
+gem 'momentjs-rails', '~> 2.5.1'
+
 ruby "2.1.1"

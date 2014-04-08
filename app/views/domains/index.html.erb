@@ -1,11 +1,7 @@
 <header class="header">
   <div class="container">
     <div class="row">
-      <h1 class="logo col-md-4">
-        <a href="http://deletingdomains.herokuapp.com">
-          Deleting Domains
-        </a>
-      </h1>
+      <h1 class="logo col-md-4">Deleting Domains</h1>
     </div>
   </div>
 </header>
@@ -14,9 +10,27 @@
 
   <div class="container">
     <div class="jumbotron">
-      <h1>discover expiring domains</h1>
-      <p class="lead">find your perfect domain without being overcharged</p>
-      <p><a id="action" class="btn btn-lg btn-success" role="button">go</a></p>
+
+      <div class="banner">
+        <h1>discover expiring domains</h1>
+        <p class="lead">find your perfect domain without being overcharged</p>
+      </div>
+      <div class="search">
+        <div class="row">
+          <form role="form">
+            <div class="form-group">
+              <div class="col-md-1">
+                <label for="search">Search:</label>
+              </div>
+              <div class="col-md-4">
+                <input type="email" class="form-control" id="search" placeholder="by domains...">
+              </div>
+              <div class="col-md-1">
+                <p><a id="action" class="btn btn-lg btn-success" role="button">go</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
   </div>
 </div>
@@ -33,14 +47,13 @@
     <tbody>
       <% @domains.each do |domain| %>
         <tr>
-          <td><%= domain.id %></td>
+          <td><small><%= domain.id %></small></td>
           <td>
-            <h2>
-              <%= domain.name %>
-              <small>.<%= domain.tld %></small>
+            <h2 class="domain"><%= domain.name %>
             </h2>
+            <small class="tld">.<%= domain.tld %></small>
           </td>
-          <td><%= domain.expiry %></td>
+          <td class="expiry"><%= domain.expiry %></td>
         </tr>
       <% end %>
     </tbody>
