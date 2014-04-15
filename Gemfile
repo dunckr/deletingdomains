@@ -58,4 +58,6 @@ gem 'bootstrap-sass', '~> 3.1.1'
 
 gem 'momentjs-rails', '~> 2.5.1'
 
+gem 'zipruby', '~> 0.3.6'
+
 ruby "2.1.1"
