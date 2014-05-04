@@ -4,7 +4,7 @@
 
 Find domains that are soon to expire.
 
-[![domains expiring](http://dunckr.com/images/deletingdomains.png "deleting domains")](http://deletingdomains.herokuapp.com)
+[![domains expiring](http://dunckr.com/images/deletingDomains.png "deleting domains")](http://deletingdomains.herokuapp.com)
 
 #### Seed DB
 
